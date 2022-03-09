@@ -1,0 +1,19 @@
+{
+  "name": "cross-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "express-http-proxy": "^1.6.3",
+    "morgan": "^1.10.0"
+  }
+}
