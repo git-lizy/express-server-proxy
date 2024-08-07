@@ -2,6 +2,7 @@ const express = require('express')
 const httpProxy = require('express-http-proxy')
 const logger = require('morgan');
 const config = require('./config/index')
+const cors = require('cors')
 const app = express()
 
 const userServiceProxy = httpProxy(config.proxy_host, {
@@ -48,6 +49,7 @@ const userServiceProxy = httpProxy(config.proxy_host, {
 
 logger.format('proxy', '[proxy param] :method :url :status')
 app.use(logger('proxy'))
+app.use(cors())
 
 // 认证、限速等一系列中间件
 app.use((req, res, next) => {
